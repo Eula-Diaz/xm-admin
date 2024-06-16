@@ -87,12 +87,27 @@ export const asyncRoutes = [
   { path: '/book',
     component: Layout,
     redirect: '/book/redirect',
+    name: '图书管理',
     meta: { title: '图书管理', icon: 'documentation', roles: ['admin'] },
     children: [
       {
         path: '/book/create',
         component: () => import('@/views/book/create'),
+        name: '上传图书',
         meta: { title: '上传图书', icon: 'edit', roles: ['admin'] }
+      },
+      {
+        path: '/book/edit',
+        component: () => import('@/views/book/edit'),
+        name: '编辑图书',
+        hidden: true,
+        meta: { title: '编辑图书', icon: 'edit', roles: ['admin'], activeMenu: '/book/list' }
+      },
+      {
+        path: '/book/list',
+        component: () => import('@/views/book/create'),
+        name: '图书列表',
+        meta: { title: '图书列表', icon: 'list', roles: ['admin'] }
       }
     ]
   },

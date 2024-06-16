@@ -1,18 +1,14 @@
 <template>
   <div>
-    <detail />
+    <detail is-edit />
   </div>
-
 </template>
 
 <script>
-import Detail from './components/Detail.vue'
+import Detail from './components/Detail'
 export default {
-  name: 'XmAdminCreate',
-  components: {
-    Detail
-  },
-
+  name: 'XmAdminEdit',
+  components: { Detail },
   data() {
     return {
 

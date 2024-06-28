@@ -22,3 +22,26 @@ export function getBook(fileName) {
     params: { fileName }
   })
 }
+
+export function getCategory(fileName) {
+  return request({
+    url: '/book/category',
+    method: 'get'
+  })
+}
+
+export function listBook(params) {
+  return request({
+    url: '/book/list',
+    method: 'get',
+    params
+  })
+}
+
+export function deleteBook(fileName) {
+  return request({
+    url: '/book/delete',
+    method: 'get',
+    params: { fileName }
+  })
+}
